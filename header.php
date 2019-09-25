@@ -7,7 +7,7 @@
 	</head>
 <body>
 	<div class="container-fluid">
-		<header class="row sticky-top">
+		<header class="row"><!-- sticky-top-->
 			<div class="header-logo col-lg-4 col-md-4 col-sm-6 col-6">
 				<?php 
 					$custom_logo_id = get_theme_mod( 'custom_logo' );
@@ -32,7 +32,7 @@
 						<?php
 								/* Dynamic menu */
 								if(function_exists('wp_nav_menu')) {
-										wp_nav_menu(array(
+									wp_nav_menu(array(
 										'theme_location' => 'primary',
 										'depth'             => 2,
 										'container'         => 'ul',
@@ -41,7 +41,7 @@
 										'menu_class' => 'navbar-nav mr-auto',
 										'fallback_cb' => '',
 										'walker' => new Multilevel_Menu()
-										)); 
+									)); 
 								}
 						?>
 					</div>

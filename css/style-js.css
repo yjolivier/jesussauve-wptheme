@@ -3,13 +3,31 @@
  * SCSS variables
  */
 /*
-================================================================================================
+============================================================================================
 Typography
-================================================================================================
+============================================================================================
 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cairo", sans-serif;
+  font-weight: 700;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+.corps {
+  background-color: #ccc;
+}
+
 /*
 ============================================================================================
-1.1 Header style 
+ 1. Header style 
 ============================================================================================
 */
 header {
@@ -27,8 +45,7 @@ header .header-logo {
   padding-top: 0px;
 }
 header .header-logo img {
-  max-width: 100%;
-  height: auto;
+  width: auto;
   max-height: 130px;
 }
 header .header-logo .card-logo {
@@ -44,7 +61,7 @@ header .header-menu {
 header .header-menu a {
   text-decoration: none;
   font-size: 17px;
-  color: #656262;
+  color: #EC801D;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -58,7 +75,7 @@ header .header-menu .navbar.navbar-expand-lg.navbar-white.bg-white {
   float: right;
 }
 header .btn-menu {
-  color: #656262;
+  color: #EC801D;
   font-size: 25px;
   border: 2px solid;
   padding: 5px;
@@ -68,59 +85,58 @@ header .btn-menu:hover {
 }
 
 /*
-================================================================================================
-Slider style
-================================================================================================
+============================================================================================
+ 2. Slider style
+============================================================================================
 */
+.carousel-container {
+  overflow: hidden;
+}
+
 .slide {
   width: 100%;
   background-size: cover;
   height: 450px;
   position: relative;
   overflow: hidden;
+  background: radial-gradient(circle at center, #000 0%, #737373 65%);
 }
-
-.carousel-container .slide img {
-  /*opacity: 0.5;*/
-  width: 100%;
+.slide h2 {
+  color: #A30C31;
 }
-
-.slide-article {
-  width: 37%;
+.slide img {
+  min-width: 100%;
+  height: auto;
+  opacity: 0.75;
+}
+.slide .slide-article {
+  width: 45%;
   padding: 23px;
   margin-left: 100px;
   font-family: montserrat;
   position: absolute;
   bottom: 118px;
 }
-
-.slide-article h4 {
+.slide .slide-article p {
   color: #fff;
-  font-weight: bold;
 }
-
-.slide-article p {
-  color: #fff;
-  font-size: 0.9em;
-}
-
-.btn-carousel {
-  width: 127px;
-  color: #fff;
-  height: auto;
-  border-radius: 7px 7px 7px 7px;
-  font-size: 0.9em;
-  padding: 8px;
-  background: #F51F8A;
-}
-
-.btn-carousel a {
+.slide .btn-carousel {
   text-decoration: none;
   color: #fff;
+  background: #8b0a2a;
+  padding: 7px 25px;
+  border-radius: 30px;
+  font-size: 0.9em;
+  transition: background-color 0.5s;
+  font-family: "Cairo", sans-serif;
+  font-weight: 400;
+  margin: 5px;
 }
 
-.btn-carousel a:hover {
-  color: #656262;
+.carousel-btn-container .btn-carousel:hover {
+  color: #fff;
+  background-color: #EC801D;
+  text-decoration: none;
 }
 
 .carousel-control-prev, .carousel-control-next {
@@ -334,7 +350,7 @@ footer {
   width: 48%;
   margin-top: 20px;
   border: 3px solid #fcfcfc;
-  color: #656262;
+  color: #fff;
   padding: 10px;
   width: 50%;
   border-radius: 5px 0px 0px 5px;
@@ -475,6 +491,10 @@ Media queries
 /*screen resolution <= 1024 */
 @media screen and (max-width: 1024px) {
   /*slide personalisation */
+  .carousel-control-prev, .carousel-control-next {
+    margin-top: 20%;
+  }
+
   .slide-article {
     width: 50%;
     bottom: 15%;
@@ -494,16 +514,11 @@ Media queries
 @media screen and (max-width: 960px) {
   /*slide personalisation */
   .slide {
-    height: 300px;
+    height: 350px;
   }
-
-  .slide-article {
+  .slide .slide-article {
     width: 50%;
-    bottom: 15%;
-  }
-
-  .slide-article p {
-    display: none;
+    bottom: 12%;
   }
 
   .carousel-control-prev, .carousel-control-next {
@@ -524,21 +539,21 @@ Media queries
 
   /*slide personalisation */
   .slide {
-    height: 300px;
+    height: 250px;
   }
-
-  .slide-article {
-    width: 50%;
-    bottom: 15%;
-  }
-
-  .slide-article p {
-    display: none;
+  .slide .slide-article {
+    width: 100%;
+    bottom: 10%;
+    text-align: center;
+    margin-left: 0;
   }
 
   .carousel-control-prev, .carousel-control-next {
     width: 4%;
     margin-top: 20%;
+    border: none;
+    margin-right: 0;
+    margin-left: 0;
   }
 
   .block-article {
@@ -560,17 +575,14 @@ Media queries
 
   /*slide personalisation */
   .slide {
-    height: 300px;
+    height: 150px;
   }
-
-  .slide-article {
-    width: 70%;
-    bottom: 32%;
-    margin-left: 15%;
+  .slide .slide-article {
+    bottom: 10px;
   }
-
-  .slide-article h4 {
-    font-size: 1.3em;
+  .slide .slide-article h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
   }
 
   .slide-article p {
@@ -578,15 +590,7 @@ Media queries
   }
 
   .carousel-control-prev, .carousel-control-next {
-    width: 4%;
-    margin-top: 25%;
-    border: none;
-  }
-
-  .btn-carousel {
-    width: 90px;
-    font-size: 0.6em;
-    padding: 5px;
+    margin-top: 10%;
   }
 }
 

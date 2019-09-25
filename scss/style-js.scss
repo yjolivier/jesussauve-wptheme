@@ -3,8 +3,8 @@
  */
 
 $primary-color: #A30C31;
-$paragraph-color: #656262;
-$secondary-color: #4d648d;
+$secondary-color: #EC801D;
+$paragraph-color: #fff;
 $footer-text-color: #d9d7d7;
 $footer-background-color: #4E4E4E;
 $light-background-color: #F2F2F2;
@@ -13,14 +13,28 @@ $secondary-font: 'Montserrat', sans-serif;
 $icon-font: "FontAwesome";
 
 /*
-================================================================================================
+============================================================================================
 Typography
-================================================================================================
+============================================================================================
 */
+h1, h2, h3, h4, h5 ,h6{
+	font-family: $primary-font;
+	font-weight: 700;
+}
+body{
+	font-family: $secondary-font;
+	font-weight: 300;
+}
+p {
+	font-size: 1.1em;
+}
+.corps{
+	background-color: #ccc;
+}
 
 /*
 ============================================================================================
-1.1 Header style 
+ 1. Header style 
 ============================================================================================
 */
 header{
@@ -38,8 +52,7 @@ header{
     padding-top: 0px;
 
 		img{
-			max-width: 100%;
-			height: auto;
+			width: auto;
 			max-height: 130px;
 		}
 		.card-logo {
@@ -56,7 +69,7 @@ header{
 		a {
 			text-decoration: none;
 			font-size: 17px;
-		  color: $paragraph-color;
+		  color: $secondary-color;
 	    font-weight: bold;
 			text-transform: uppercase;
 
@@ -72,7 +85,7 @@ header{
 		}
 	}
 	.btn-menu {
-		color: $paragraph-color;
+		color: $secondary-color;
 		font-size: 25px;
 		border: 2px solid;
 		padding: 5px;
@@ -84,52 +97,60 @@ header{
 }
 
 /*
-================================================================================================
-Slider style
-================================================================================================
+============================================================================================
+ 2. Slider style
+============================================================================================
 */
+.carousel-container{
+	overflow: hidden;
+}
 .slide{
 	width: 100%;
 	background-size: cover;
 	height: 450px;
 	position: relative;
-	overflow: hidden;	
+	overflow: hidden;
+	background: radial-gradient(circle at center,  #000 0%, darken(#FFF, 55) 65%); 
+
+	h2{
+		color: $primary-color;
+	}
+
+	img{
+		min-width: 100%;
+		height: auto;
+		opacity: 0.75;
+	}
+	.slide-article {
+		width: 45%;
+		padding: 23px;
+		margin-left: 100px;
+		font-family: montserrat;
+		position: absolute;
+		bottom: 118px;
+
+		p {
+			color: $paragraph-color;
+		}
+	}
+
+	.btn-carousel {
+		text-decoration: none;
+		color: $paragraph-color;
+		background: darken($primary-color, 5);
+		padding: 7px 25px;
+		border-radius: 30px;
+		font-size: .9em;
+		transition: background-color .5s;
+		font-family: $primary-font;
+		font-weight: 400;
+		margin: 5px;
+	}
 } 
-.carousel-container .slide img{
-	/*opacity: 0.5;*/
-	width: 100%;
-}
-.slide-article{
-	width: 37%;
-	padding: 23px;
-	margin-left: 100px;
-	font-family: montserrat;
-	position: absolute;
-	bottom: 118px;
-}
-.slide-article h4{
-	color: #fff;
-	font-weight: bold;
-}
-.slide-article p{
-	color: #fff;
-	font-size: 0.9em;
-}
-.btn-carousel{
-	width: 127px;
-	color: #fff;
-	height: auto;
-	border-radius: 7px 7px 7px 7px;
-	font-size: 0.9em;
-	padding: 8px;
-	background: #F51F8A;
-}
-.btn-carousel a{
-	text-decoration: none;
-	color: #fff;
-}
-.btn-carousel a:hover{
+.carousel-btn-container .btn-carousel:hover{
 	color: $paragraph-color;
+	background-color: $secondary-color;
+	text-decoration: none;
 }
 .carousel-control-prev, .carousel-control-next{
 	height: 35px;
@@ -153,7 +174,7 @@ Slider style
 .carousel-control-prev-icon, .carousel-control-next-icon{
 	background-image: none;
 	font-family: 'FontAwesome';
-	color:#fff;
+	color: $paragraph-color;
 	transition: opacity 300ms ease-out;
 }
 /*
@@ -428,11 +449,15 @@ Media queries
 /*screen resolution <= 1024 */
 @media screen and (max-width: 1024px)
 {
-    /*slide personalisation */
+		/*slide personalisation */
+		.carousel-control-prev, .carousel-control-next {
+			margin-top: 20%;
+		}
+
     .slide-article{
-	width: 50%;
-	bottom: 15%;
-	}
+			width: 50%;
+			bottom: 15%;
+		}
 
 	.slide-article p{
 	/*display: none;*/
@@ -447,16 +472,14 @@ Media queries
 
 @media screen and (max-width: 960px)
 {
-    /*slide personalisation */
-    .slide{
-    height: 300px;
-    }
-    .slide-article{
-	width: 50%;
-	bottom: 15%;
-	}
-	.slide-article p{
-	display: none;
+  /*slide personalisation */
+	.slide{
+		height: 350px;
+
+		.slide-article{
+			width: 50%;
+			bottom: 12%;
+		}
 	}
 	.carousel-control-prev, .carousel-control-next{
 	width: 4%;
@@ -477,19 +500,21 @@ Media queries
 
   /*slide personalisation */
   .slide{
-    height: 300px;
+    height: 250px;
+		
+		.slide-article{
+			width: 100%;
+			bottom: 10%;
+			text-align: center;
+			margin-left: 0;
+		}
   }
-  .slide-article{
-    width: 50%;
-    bottom: 15%;
-	}
-
-	.slide-article p{
-	display: none;
-	}
 	.carousel-control-prev, .carousel-control-next{
-	width: 4%;
-	margin-top: 20%;
+		width: 4%;
+		margin-top: 20%;
+		border: none;
+		margin-right: 0;
+		margin-left: 0;
 	}
 	.block-article{
 		margin-bottom: 20px;
@@ -511,27 +536,19 @@ Media queries
   }
   /*slide personalisation */
   .slide{
-    height: 300px;
+    height: 150px;
+		.slide-article { 
+			bottom: 10px;
+			h2{
+				font-size: 1.8em;
+				margin-bottom: 20px;
+			}
+		}
   }
-    .slide-article{
-	width: 70%;
-	bottom: 32%;
-	margin-left: 15%;
-	}
-	.slide-article h4{
-		font-size: 1.3em;
-	}
 	.slide-article p{
 	display: none;
 	}
 	.carousel-control-prev, .carousel-control-next{
-	width: 4%;
-	margin-top: 25%;
-	border: none;
-	}
-	.btn-carousel{
-		width: 90px;
-		font-size: 0.6em;
-		padding: 5px;
+	margin-top: 10%;
 	}
 }
