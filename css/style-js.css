@@ -31,7 +31,6 @@ p {
 ============================================================================================
 */
 header {
-  height: 135px;
   background-color: #fff;
   padding-left: 40px;
   padding-right: 40px;
@@ -171,59 +170,64 @@ header .btn-menu:hover {
 }
 
 /*
-================================================================================================
-Section eve
-================================================================================================
+============================================================================================
+ 3. Section evenement
+============================================================================================
 */
 .section-evenement {
   background-color: #F2F2F2;
+  overflow: hidden;
 }
 
 .section-evenement-title {
   padding: 25px;
-  color: #FFC21C;
+  color: #A30C31;
   text-align: center;
   position: relative;
   padding-bottom: 0px;
 }
-
 .section-evenement-title p {
   color: #626265;
 }
 
 .block-article {
-  font-family: montserrat;
   color: #272727;
   margin-bottom: 30px;
   overflow: hidden;
   border-radius: 0px;
   background-color: #F2F2F2;
-  padding: 15px;
+  padding: 20px 85px 20px 85px;
 }
-
 .block-article .article {
   border-radius: 0px;
-  padding: 20px;
   background-color: #F2F2F2;
   border: 0px;
+  margin-bottom: 20px;
 }
-
-.card-img-top {
-  height: 240px;
-  border-radius: 0px;
-  width: 100%;
+.block-article .article img {
+  transition: transform 0.5s;
+  max-width: 100%;
+  height: auto;
 }
-
 .block-article .article img:hover {
-  opacity: 0.6;
+  /*opacity: 0.6;*/
+  transform: scale(1.1);
+}
+.block-article .card-img-top {
+  border-radius: 0px;
+  max-width: 100%;
+  height: auto;
+}
+
+.card .card-img {
+  height: 220px;
+  overflow: hidden;
+  background-color: #EC801D;
 }
 
 .block-article .article .card-img:hover {
-  background-color: #8f6d0c;
-}
-
-.block-article p {
-  font-size: 0.8em;
+  background-color: #A30C31;
+  cursor: pointer;
 }
 
 .block-article .time {
@@ -231,66 +235,72 @@ Section eve
   color: #8f6d0c;
 }
 
+.card-container {
+  background: #fff;
+  border: 1px solid #dee4ee;
+  transition: transform 1s;
+}
+
+.card-container:hover {
+  box-shadow: 0px 4px 26px 3px #d5ddea;
+}
+
 .card-body {
-  padding: 0px;
+  padding: 0px 10px 0px 10px;
   background-color: white;
   text-align: center;
 }
-
+.card-body h5 {
+  color: #A30C31;
+}
 .card-body p {
   color: #626265;
-  font-weight: normal;
+  padding: 2px;
 }
-
-.card-body h5 {
-  color: #FFC21C;
+.card-body .card-text {
+  padding-top: 10px;
 }
 
 .btn-article {
+  cursor: pointer;
   width: 114px;
   font-size: 0.9em;
+  font-weight: 550;
   padding: 8px;
-  /*background: #F51F8A;*/
-  border-bottom: 2px solid #FFC21C;
   text-align: center;
-  color: #FFC21C;
   margin-bottom: 20px;
+  font-family: "Cairo", sans-serif;
+  text-transform: uppercase;
 }
-
 .btn-article a {
   text-decoration: none;
-  color: #FFC21C;
+  color: #A30C31;
+  border-bottom: 2px solid #A30C31;
 }
-
-.btn-article:hover {
-  color: #F51F8A;
-  border-bottom: 2px solid #F51F8A;
-}
-
 .btn-article a:hover {
-  color: #F51F8A;
+  color: #EC801D;
+  border-bottom: 2px solid #EC801D;
 }
 
-/*
-================================================================================================
-Section actualité
-================================================================================================
-*/
-.section-actualite {
+.btn-article a .section-actualite {
   background-color: #fff;
   padding: 0px;
 }
 
+.section-actualite.row {
+  padding: 20px 85px 20px 85px;
+}
+
 .section-actualite-title {
   padding: 15px;
-  color: #FFC21C;
+  color: #A30C31;
   text-align: center;
   position: relative;
 }
 
 .block-article-actualite {
   font-family: montserrat;
-  color: #272727;
+  color: #fff;
   margin-bottom: 30px;
   overflow: hidden;
   border-radius: 0px;
@@ -303,7 +313,7 @@ Section actualité
 }
 
 .block-article-actualite .actualite-article .body-actualite {
-  border: solid 1px #707070;
+  border: solid 1px #EC801D;
 }
 
 .body-actualite h5 {
@@ -311,7 +321,7 @@ Section actualité
 }
 
 .section-actualite .bulle-numero {
-  background-color: #FFC21C;
+  background-color: #EC801D;
   padding: 13px 15px;
   margin-bottom: -24px;
   margin-left: 41%;
@@ -526,6 +536,11 @@ Media queries
     margin-top: 15%;
   }
 
+  /*section evenement personalisation */
+  .block-article, .section-actualite.row {
+    padding: 20px 20px 20px 40px;
+  }
+
   footer .col-sm {
     text-align: left;
   }
@@ -556,9 +571,9 @@ Media queries
     margin-left: 0;
   }
 
-  .block-article {
-    margin-bottom: 20px;
-    justify-content: space-around;
+  /*section evenement personalisation */
+  .block-article, .section-actualite.row {
+    padding: 15px 0px 15px 10px;
   }
 }
 /*screen resolution <= 540 */
