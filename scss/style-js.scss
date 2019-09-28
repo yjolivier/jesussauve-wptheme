@@ -31,6 +31,7 @@ Table of Content
 	10.4 screen resolution <= 540 
 	11. Pagination
 	12. Social networks icon
+	13. Contact form
 ============================================================================================
 */
 
@@ -580,7 +581,8 @@ footer .widget_search{
 	color: $paragraph-color;
 	text-transform: uppercase;
 	margin-top: 20px;
-	
+	transition: background 0.5s;
+
 	&:hover{
 		background-color: $secondary-color;
 	}
@@ -988,5 +990,36 @@ ul.pagination li.current a:hover, ul.pagination li.current a:focus, ul.paginatio
 	
 	a[href*="linkedin.com"]::before {
   		content: '\f08c'; 
+	}
+}
+/*
+============================================================================================13. Contact form
+============================================================================================
+*/
+.wpcf7{
+	label{
+		color: $primary-color;
+	}
+}
+.wpcf7-form-control{
+	border-top-width: 0px;
+	border-top-style: solid;
+	border-left-width: 0px;
+	border-left-style: solid;
+	border-right-width: 0px;
+	border-right-style: solid;
+}
+.wpcf7-submit{
+	background: $primary-color;
+	padding: 7px;
+	border-radius: 5px 0px 5px 0px;
+	text-align: center;
+	border: 0;
+	color: #fff;
+	text-transform: uppercase;
+	margin-top: 20px;
+	transition: background 0.5s;
+	&:hover{
+		background: $secondary-color;
 	}
 }

@@ -15,10 +15,7 @@ Template name: Blog
 <?php get_header(); ?>
 			<section class="row single-container">
 				<div class="single-slide col-lg-12">
-					<img src="<?php echo wp_get_attachment_url(get_theme_mod('page_background_img')); ?>">
-					<div class="archive-title">
-						<h2><?php the_title();?></h2>
-					</div>
+					<?php get_template_part( 'page-templates/page-slide');?>
 				</div>
 				<div class="container single-content">
 			        <div class="row sidbar-article-container">
@@ -47,7 +44,7 @@ Template name: Blog
 									            <div class="card-body">
 									                <p class="card-text">
 									                    <h5><?php the_title();?></h5>
-									          			<p><?php elogeb_excerpt(100);?></p>
+									          			<p><?php jesussauve_excerpt(100);?></p>
 									                </p>
 									                <center>
 										                <div class="btn-article">
