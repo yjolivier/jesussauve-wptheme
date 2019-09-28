@@ -155,6 +155,14 @@ function OurWidgetsInit() {
 			'after_title'   => '</h3>',
 		)
 	);
+	register_sidebar(
+		array(
+			'name'          => 'footer search',
+			'id'            => 'searchbar',
+			'before_widget' => '<div  id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+		)
+	);
 }
 add_action( 'widgets_init', 'OurWidgetsInit' );
 /**

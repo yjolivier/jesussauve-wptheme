@@ -1,10 +1,45 @@
 @charset "UTF-8";
+/*
+============================================================================================
+Table of Content
+============================================================================================
+	1. SCSS variables
+	2. Typography
+	3. Header style
+	3.1 Logo container costomize
+	3.2 menu container costomize
+	4. Slider style
+	4.1 slide
+	4.1.2 slide article
+	4.1.3 slide carousel
+	5. Section evenement
+	5.1 Section eve title
+	5.2 Block article
+	6. Section actualité
+	7. footer
+	7.1 footer logo
+	7.2 footer search
+	7.3 footer middle card
+	7.3.1 footer menu
+	7.3.2 footer reseau social card
+	7.4 footer signature
+	8. widget style
+	9. Page style
+	10. Media queries
+	10.1 screen resolution <= 1024 
+	10.2 screen resolution <= 960 
+	10.3 screen resolution <= 720
+	10.4 screen resolution <= 540 
+	11. Pagination
+	12. Social networks icon
+============================================================================================
+*/
 /**
- * SCSS variables
+ * 1. SCSS variables
  */
 /*
 ============================================================================================
-Typography
+2. Typography
 ============================================================================================
 */
 h1, h2, h3, h4, h5, h6 {
@@ -19,6 +54,7 @@ body {
 
 p {
   font-size: 1.1em;
+  font-weight: 400;
 }
 
 .corps {
@@ -27,7 +63,7 @@ p {
 
 /*
 ============================================================================================
- 1. Header style 
+ 3. Header style 
 ============================================================================================
 */
 header {
@@ -37,25 +73,28 @@ header {
   padding-top: 0px;
   box-shadow: 0px 0px 19px 0px #d5ddea;
   /*
-   * Logo container costomize
+   * 3.1 Logo container costomize
   */
+  /**
+   * 3.2 menu container costomize
+   */
 }
 header .header-logo {
-  padding-top: 0px;
+  padding: 8px 0px;
 }
 header .header-logo img {
-  width: auto;
-  max-height: 130px;
+  max-width: 150px;
+  height: auto;
 }
 header .header-logo .card-logo {
   width: 100px;
-  height: 100px;
+  height: 130px;
   margin-bottom: 0;
   padding-bottom: 0;
 }
 header .header-menu {
   font-family: "Montserrat", sans-serif;
-  padding-top: 45px;
+  padding-top: 15px;
 }
 header .header-menu a {
   text-decoration: none;
@@ -63,6 +102,7 @@ header .header-menu a {
   color: #EC801D;
   font-weight: bold;
   text-transform: uppercase;
+  transition: color 0.5s;
 }
 header .header-menu a:hover {
   color: #A30C31;
@@ -72,6 +112,10 @@ header .header-menu ul li {
 }
 header .header-menu .navbar.navbar-expand-lg.navbar-white.bg-white {
   float: right;
+}
+header .header-menu .current-menu-item a, header .header-menu .current_page_item a,
+header .header-menu .current-menu-ancestor a {
+  color: #A30C31;
 }
 header .btn-menu {
   color: #EC801D;
@@ -85,13 +129,16 @@ header .btn-menu:hover {
 
 /*
 ============================================================================================
- 2. Slider style
+ 4. Slider style
 ============================================================================================
 */
 .carousel-container {
   overflow: hidden;
 }
 
+/*
+* 4.1 slide 
+*/
 .slide {
   width: 100%;
   background-size: cover;
@@ -99,8 +146,14 @@ header .btn-menu:hover {
   position: relative;
   overflow: hidden;
   background: radial-gradient(circle at center, #000 0%, #737373 65%);
+  /*
+  * 4.1.2 slide article
+  */
+  /*
+  * 4.1.3 slide carousel 
+  */
 }
-.slide h2 {
+.slide h3 {
   color: #A30C31;
 }
 .slide img {
@@ -171,14 +224,17 @@ header .btn-menu:hover {
 
 /*
 ============================================================================================
- 3. Section evenement
+ 5. Section evenement
 ============================================================================================
 */
 .section-evenement {
-  background-color: #F2F2F2;
+  background-color: #f0efef;
   overflow: hidden;
 }
 
+/*
+* 5.1 Section eve title 
+*/
 .section-evenement-title {
   padding: 25px;
   color: #A30C31;
@@ -190,17 +246,20 @@ header .btn-menu:hover {
   color: #626265;
 }
 
+/*
+* 5.2 Block article 
+*/
 .block-article {
   color: #272727;
   margin-bottom: 30px;
   overflow: hidden;
   border-radius: 0px;
-  background-color: #F2F2F2;
+  background-color: #f0efef;
   padding: 20px 85px 20px 85px;
 }
 .block-article .article {
   border-radius: 0px;
-  background-color: #F2F2F2;
+  background-color: #f0efef;
   border: 0px;
   margin-bottom: 20px;
 }
@@ -222,12 +281,6 @@ header .btn-menu:hover {
 .card .card-img {
   height: 220px;
   overflow: hidden;
-  background-color: #EC801D;
-}
-
-.block-article .article .card-img:hover {
-  background-color: #A30C31;
-  cursor: pointer;
 }
 
 .block-article .time {
@@ -282,7 +335,12 @@ header .btn-menu:hover {
   border-bottom: 2px solid #EC801D;
 }
 
-.btn-article a .section-actualite {
+/*
+============================================================================================
+ 6. Section actualité
+============================================================================================
+*/
+.section-actualite {
   background-color: #fff;
   padding: 0px;
 }
@@ -310,6 +368,10 @@ header .btn-menu:hover {
   border-radius: 0px;
   padding: 20px;
   border: 0px;
+  transition: margin-top 0.5s;
+}
+.block-article-actualite .actualite-article:hover {
+  margin-top: -20px;
 }
 
 .block-article-actualite .actualite-article .body-actualite {
@@ -333,172 +395,388 @@ header .btn-menu:hover {
   width: 58px;
 }
 
-footer {
-  background-color: #4E4E4E;
-  color: #fff;
+/*
+============================================================================================
+ 7. footer
+============================================================================================
+*/
+footer.footer-container {
+  background-color: #1F1F1F;
+  color: #d9d7d7;
+  padding: 10px 85px 20px 85px;
+  font-family: "Montserrat", sans-serif;
+  /*
+  * 7.1 footer logo
+  */
 }
-
-.footer-logo {
-  padding: 15px;
-  color: #FFC21C;
-  font-size: 1.3em;
-  padding-bottom: 0px;
+footer.footer-container .footer-logo {
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-top: 35px;
 }
-
-.footer-logo p {
-  margin-left: 10%;
-}
-
-#formulaire {
-  width: 100%;
-  padding: 0 20px;
-  display: flex;
-  margin-left: 36%;
-}
-
-.champdesaisir {
-  width: 48%;
-  margin-top: 20px;
-  border: 3px solid #fcfcfc;
-  color: #fff;
-  padding: 10px;
-  width: 50%;
-  border-radius: 5px 0px 0px 5px;
-}
-
-#formulaire .bouton {
-  background: #FFC21C;
-  padding: 10px;
-  border-radius: 0px 5px 5px 0px;
-  text-align: center;
-  width: 50px;
-  border: 0;
-  color: #fff;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-weight: bold;
-  height: 50px;
-  margin-top: 20px;
+footer.footer-container .footer-logo img {
+  max-width: 150px;
+  height: auto;
 }
 
 /*
-================================================================================================
-Footer
-================================================================================================
+	* 7.2 footer search
 */
-footer .descriptition {
-  margin-left: 5%;
-  color: #778191;
+.search-bar {
+  padding-top: 15px;
+  padding-right: 0px;
 }
-
-footer .description .numero {
-  font-family: "FontAwesome";
-}
-
-#formulaire .bouton:hover {
-  background-color: #F51F8A;
-}
-
-.footer-menu ul {
-  list-style-type: none;
-  list-style-image: url("../img/ico_liensexterne.png");
-  padding-left: 2px;
-}
-
-.footer-menu ul a {
-  text-decoration: none;
-  color: #778191;
-}
-
-.footer-menu ul a:hover {
-  color: #F51F8A;
-}
-
-footer .reseau-social {
-  font-family: "FontAwesome";
+.search-bar .searchform {
+  width: 100%;
+  padding: 0;
   display: flex;
-  justify-content: space-around;
+}
+.search-bar label {
+  display: none;
+}
+.search-bar .widget {
+  background-color: transparent;
 }
 
+/*
+	* 7.3 footer middle card
+*/
+.footer-middle {
+  width: 100%;
+  /*
+  * 7.3.1 footer menu
+  */
+}
+.footer-middle .widget {
+  background-color: transparent;
+}
+.footer-middle .descriptition .widget_text {
+  color: #d9d7d7;
+  margin-top: 0;
+}
+.footer-middle .footer-menu ul {
+  list-style-type: none;
+  padding-left: 10px;
+  text-transform: uppercase;
+}
+.footer-middle .footer-menu ul li {
+  margin-bottom: 8px;
+}
+.footer-middle .footer-menu ul li::before {
+  font-family: "FontAwesome";
+  display: block;
+  position: absolute;
+  left: 0;
+  font-size: 17px;
+  color: #d9d7d7;
+  content: "";
+  margin-left: 10px;
+}
+.footer-middle .footer-menu ul a {
+  text-decoration: none;
+  color: #d9d7d7;
+  transition: color 0.5s;
+}
+.footer-middle .footer-menu ul a:hover {
+  color: #EC801D;
+}
+
+/*
+	* 7.3.2 footer reseau social card
+*/
+footer .reseau-social {
+  font-family: "Montserrat", sans-serif;
+}
 footer .reseau-social a {
   text-decoration: none;
-  color: #778191;
+  color: #d9d7d7;
+  transition: color 0.5s;
 }
-
 footer .reseau-social a:hover {
-  color: #F51F8A;
-}
-
-footer .signature {
-  color: #778191;
-  background-color: #3D3D3D;
-  padding: 10px;
-  height: 48px;
+  color: #EC801D;
 }
 
 /*
-================================================================================================
-page archive
-================================================================================================
+	* 7.4 footer signature
 */
-.section {
-  background-color: #eff1f4;
+.signature {
+  color: #d9d7d7;
+  background-color: #060606;
+  padding: 10px;
+  color: #6c6c6c;
+  display: block;
+}
+.signature a {
+  color: #cccccc;
 }
 
-.archive-section {
-  background-image: url("../img/slide_2.jpg");
-  height: 350px;
-  background-size: cover;
-  position: relative;
-}
-
-.archive-title-container {
-  margin-top: 169px;
-}
-
-.archive-title-container .space {
-  padding: 15px;
-  background-color: #fff;
-}
-
-.archive-title {
-  background-color: #fff;
-  padding: 35px;
-  margin-bottom: 35px;
-  color: #3c4d6b;
-  font-size: bold;
-  font-weight: bold;
-}
-
-.block-archive-container {
-  background-color: #fff;
-}
-
-.block-archiver {
-  border: 0px;
-  border-radius: 0px;
+/*
+===========================================================================================
+ 8. widget style
+===========================================================================================
+*/
+.widget {
+  margin-bottom: 30px;
+  overflow: hidden;
   padding: 20px;
-  padding-top: 0px;
+  padding-right: 10px;
+  color: #585858;
+  background-color: #f0efef;
+  margin-right: 15px;
+  margin-left: 10px;
+  margin-top: 40px;
+}
+.widget .gallery-size-thumbnail {
+  overflow: hidden;
+}
+.widget .gallery-size-thumbnail .gallery-item {
+  width: 50% !important;
+}
+.widget #searchform .screen-reader-text {
+  display: none;
 }
 
-.block-archiver .card-body {
-  text-align: left;
+footer .widget_search {
+  float: right;
+  padding-right: 0;
+  padding-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-top: 20px;
 }
 
-.block-archiver .card-img, .block-archiver .card-img img {
-  height: 300px;
+.widget.widget_text {
+  padding: 0px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.widget.social_widget {
+  padding: 0;
+  margin-top: 0;
+}
+
+.widget-search {
+  padding: 30px;
+  color: #585858;
+  background-color: #eff1f4;
+  padding-right: 0px;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding-right: 30px;
+}
+
+#s {
+  margin-top: 20px;
+  border: 3px solid #fcfcfc;
+  color: gray;
+  padding: 4px;
+  border-radius: 0px 5px 0px 5px;
+  font-size: 1rem;
+}
+
+#searchsubmit {
+  background: #A30C31;
+  padding: 7px;
+  border-radius: 5px 0px 5px 0px;
+  text-align: center;
+  border: 0;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+#searchsubmit:hover {
+  background-color: #EC801D;
 }
 
 .sidebar {
-  background-color: #ccc;
+  padding: 0px 0px 40px 20px;
+  overflow: hidden;
+}
+
+.single-search-bar {
+  margin-bottom: 30px;
+}
+
+.sidebar-content .widget_media_image {
+  margin-left: 0;
+  padding-left: 0;
+}
+.sidebar-content .widget ul {
+  list-style-type: none;
+  padding-left: 10px;
+}
+.sidebar-content .widget ul li {
+  margin-bottom: 10px;
+}
+.sidebar-content .widget ul a {
+  text-decoration: none;
+  color: #A30C31;
+}
+.sidebar-content .widget ul a:hover {
+  color: #EC801D;
+}
+.sidebar-content .widget-title {
+  border-bottom: 1px solid #e8eaec;
+  margin-bottom: 19px;
+  padding-bottom: 20px;
+}
+
+#wp-calendar {
+  width: 100% !important;
+}
+
+/*
+===========================================================================================
+ 9. Page style
+===========================================================================================
+*/
+.page-content {
+  overflow: hidden;
+}
+
+.page-article-container {
+  padding: 20px 85px 20px 85px;
+  /*background-color: #F2F2F2;*/
+}
+.page-article-container .card {
+  background-color: transparent;
+  border: none;
+}
+
+.page-slide {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+  padding: 0;
+  background-color: #000;
+}
+.page-slide img {
+  max-width: 100%;
+  height: auto;
+  opacity: 0.8;
+}
+
+.page-title {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  text-align: center;
+  color: #A30C31;
+  text-transform: uppercase;
+}
+
+.archive-article {
+  color: #272727;
+  margin-bottom: 30px;
+  overflow: hidden;
+  border-radius: 0px;
+  padding: 0;
+  background-color: none;
+  padding-left: 20px;
+}
+
+.archive-block {
+  padding: 12px;
+  padding-top: 0px;
+  margin-bottom: 20px;
+}
+
+.archive-article-box {
+  background: #fff;
+  border: 1px solid #dee4ee;
+  transition: transform 1s;
+}
+.archive-article-box:hover {
+  box-shadow: 0px 4px 26px 3px #d5ddea;
+}
+.archive-article-box .card-img img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.5s;
+}
+.archive-article-box .card-img img:hover {
+  transform: scale(1.1);
+}
+
+.row.article {
+  padding-left: 20px;
+}
+
+.card.single-article {
+  padding: 40px;
+  border: 0;
+  border-radius: 0;
+  padding-left: 20px;
+}
+.card.single-article .single-card-img {
+  border-radius: 0;
+  height: 350px;
+  overflow: hidden;
+}
+
+.single-article h1 {
+  color: #A30C31;
+  font-size: 32px;
+}
+
+.date {
+  color: #EC801D;
+  font-size: 1em;
+}
+
+.single-btn-article {
+  cursor: pointer;
+  width: 97px;
+  font-size: 1em;
+  font-weight: 550;
+  padding: 0px 0px 8px 0px;
+  border-bottom: 2px solid #A30C31;
+}
+
+.single-btn-article a {
+  text-decoration: none;
+  color: #A30C31;
+}
+
+.single-btn-article:hover {
+  border-bottom: 2px solid #EC801D;
+}
+
+.single-btn-article a:hover {
+  color: #EC801D;
+}
+
+.single-card-body .card-img {
+  height: 450px;
+}
+.single-card-body .card-img img {
+  min-width: 100%;
+  height: auto;
+}
+
+.row.archive-article {
+  color: #272727;
+  margin-bottom: 30px;
+  overflow: hidden;
+  border-radius: 0px;
+  padding: 0;
+  background-color: none;
+  padding-left: 20px;
+}
+
+.card.article.col-lg-6.col-md-6 {
+  border: 0px;
 }
 
 /*
 ================================================================================================
-Media queries
+ 10. Media queries
 ================================================================================================
 */
-/*screen resolution <= 1024 */
+/*
+	10.1 screen resolution <= 1024 
+*/
 @media screen and (max-width: 1024px) {
   /*slide personalisation */
   .carousel-control-prev, .carousel-control-next {
@@ -515,12 +793,13 @@ Media queries
   }
 
   .carousel-control-prev, .carousel-control-next {
-    /*height: 60px;*/
     width: 4%;
     margin-top: 25%;
   }
 }
-/*screen resolution <= 960 */
+/*
+	10.2 screen resolution <= 960 
+*/
 @media screen and (max-width: 960px) {
   /*slide personalisation */
   .slide {
@@ -537,15 +816,21 @@ Media queries
   }
 
   /*section evenement personalisation */
-  .block-article, .section-actualite.row {
+  .block-article, .section-actualite.row, footer.footer-container, .page-article-container {
     padding: 20px 20px 20px 40px;
   }
 
   footer .col-sm {
     text-align: left;
   }
+
+  .widget_search {
+    float: none;
+  }
 }
-/*screen resolution <= 720 */
+/*
+	10.3 screen resolution <= 720 
+*/
 @media screen and (max-width: 720px) {
   /*header personalisation */
   .navbar.navbar-expand-lg.navbar-white.bg-white {
@@ -575,8 +860,14 @@ Media queries
   .block-article, .section-actualite.row {
     padding: 15px 0px 15px 10px;
   }
+
+  .Section-actualite .bulle-numero {
+    margin-left: 45%;
+  }
 }
-/*screen resolution <= 540 */
+/*
+	10.4 screen resolution <= 540 
+*/
 @media screen and (max-width: 540px) {
   /* Header personalisation */
   header {
@@ -585,7 +876,7 @@ Media queries
   }
 
   .header-menu.col-lg-8.col-md-8.col-sm-6.col-6 {
-    padding-top: 30px;
+    padding-top: 12px;
   }
 
   /*slide personalisation */
@@ -607,6 +898,120 @@ Media queries
   .carousel-control-prev, .carousel-control-next {
     margin-top: 10%;
   }
+
+  /*Section actualité bulle numero*/
+  .Section-actualite .bulle-numero {
+    margin-left: 42%;
+  }
+
+  /*footer personnalisation*/
+  footer.footer-container #s {
+    border-radius: 0px 5px 0px 5px;
+    width: 100%;
+  }
+  footer.footer-container #searchsubmit {
+    border-radius: 5px 5px 5px 5px;
+    width: 100%;
+  }
+  footer.footer-container .widget_search {
+    padding-left: 0px;
+    margin-left: 0px;
+    background-color: transparent;
+  }
+  footer.footer-container .search-bar {
+    padding-left: 0px;
+  }
+
+  /*page personnalisation*/
+  .page-article-container {
+    padding: 20px 20px 20px 5px;
+  }
+}
+/*
+============================================================================================11. Pagination
+============================================================================================
+*/
+.nav-links div {
+  display: inline;
+}
+
+.nav-links .nav-next {
+  float: right;
+}
+
+.nav-links .nav-prev {
+  float: left;
+}
+
+.page-numbers, .nav-links div {
+  font-family: "Cairo", sans-serif;
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0 2px 0 0;
+  border: 1px solid #EC801D;
+  line-height: 1;
+  text-decoration: none;
+  border-radius: 2px;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.page-numbers.current,
+a.page-numbers:hover {
+  background: #EC801D;
+  color: #fff;
+}
+
+span.page-numbers.dots {
+  color: #A30C31;
+}
+
+.pagination-wrapper {
+  margin: 0 auto;
+}
+
+ul.pagination li.current a,
+ul.pagination li.current button {
+  background: #A30C31;
+}
+
+ul.pagination li a, ul.pagination li {
+  font-size: 1em;
+  font-family: "Cairo", sans-serif;
+}
+
+ul.pagination li.current a:hover, ul.pagination li.current a:focus, ul.pagination li.current button:hover, ul.pagination li.current button:focus {
+  background: #020d16;
+}
+
+/*
+============================================================================================12. Social networks icon
+============================================================================================
+*/
+.social_widget a::before {
+  content: "";
+  display: inline-block;
+  margin-right: 10px;
+  font-family: "FontAwesome";
+  font-size: 18px;
+  vertical-align: top;
+  -webkit-font-smoothing: antialiased;
+}
+
+.social_widget a[href*="wordpress.com"]::before {
+  content: "";
+}
+.social_widget a[href*="facebook.com"]::before {
+  content: "";
+}
+.social_widget a[href*="twitter.com"]::before {
+  content: "";
+}
+.social_widget a[href*="youtube.com"]::before {
+  content: "";
+}
+.social_widget a[href*="linkedin.com"]::before {
+  content: "";
 }
 
 /*# sourceMappingURL=style-js.css.map */
