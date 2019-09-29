@@ -10,10 +10,6 @@ add_image_size( 'project-left-thumb', 590, 600, array( 'center', 'top' ) );
 add_image_size( 'project-right-thumb', 588, 500, array( 'center', 'top' ) );
 add_image_size( 'slider-cover', 1350, 450, array( 'center', 'top' ) );
 add_image_size( 'single-thumb', 700, 520, array( 'center', 'top' ) );
-/*
-add_image_size( 'single-thumb', 770, 330, array( 'center', 'top' ) );
-add_image_size( 'slider-cover', 1100, 400, array( 'center', 'top' ) );
-*/
 
 /**
  * Custom logo

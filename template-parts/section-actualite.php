@@ -39,37 +39,4 @@
         <?php $cardNum++; endwhile; wp_reset_postdata();
       ?>
       <?php endif;?> 
-      <!--  <div class="card actualite-article col-lg-4 col-md-6">
-            <div class="bulle-numero">
-              2
-            </div>
-            <div class="card-body body-actualite">
-                <p class="card-text">
-                    <h5>EVENEMENT</h5>
-                <p>Discover flexible car financing options for new or used cars, and specialty vehicles nsequat fringi porta.</p>
-                </p>
-                <center>
-                  <div class="btn-article">
-                    <a href="#">SAVOIR PLUS</a>
-                  </div>
-                </center>
-            </div>
-        </div>
-        <div class="card actualite-article col-lg-4 col-md-6">
-          <div class="bulle-numero">
-              3
-            </div>
-            <div class="card-body body-actualite">
-                <p class="card-text">
-                    <h5>EVENEMENT</h5>
-                <p>Discover flexible car financing options for new or used cars, and specialty vehicles nsequat fringi porta.</p>
-                </p>
-                <center>
-                  <div class="btn-article">
-                    <a href="#">SAVOIR PLUS</a>
-                  </div>
-                </center>
-            </div>
-        </div>  
-  </div>-->
 </section>

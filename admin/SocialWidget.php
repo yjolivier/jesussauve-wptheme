@@ -1,26 +1,26 @@
 <?php
 
 class SocialWidget extends WP_Widget {
-    public $classname      = "SocialWidget";
-    public $id             = "social_widget";
-    public $title          = "A Social Widget";
-    public $description    = "Social network widget";
-    public $prefix         = "socialwidget_";
+  public $classname      = "SocialWidget";
+  public $id             = "social_widget";
+  public $title          = "A Social Widget";
+  public $description    = "Social network widget";
+  public $prefix         = "socialwidget_";
 
-    public function __construct(){
-        
-        $options = array( 
-            'classname'     => $this->id,
-            'description'   => _('Widget for social networks'),
-        );
-
-        parent::__construct(
-            $this->id,
-            $this->title,
-            $options
-        );
+  public function __construct(){
     
-    }
+    $options = array( 
+        'classname'     => $this->id,
+        'description'   => _('Widget for social networks'),
+    );
+
+    parent::__construct(
+        $this->id,
+        $this->title,
+        $options
+    );
+
+  }
     
     /**
      * Display data in front-end
