@@ -14,9 +14,7 @@ Template name: Blog
 
 <?php get_header(); ?>
 			<section class="row single-container">
-				<div class="single-slide col-lg-12">
 					<?php get_template_part( 'page-templates/page-slide');?>
-				</div>
 				<div class="container single-content">
 			        <div class="row sidbar-article-container">
 			        	<div class="card single-article col-lg-8 col-md-12">
