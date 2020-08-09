@@ -266,6 +266,8 @@ header .btn-menu:hover {
   overflow: hidden;
   border-radius: 0px;
   background-color: #f0efef;
+  padding-left: 0;
+  padding-right: 0;
 }
 .block-article .article {
   border-radius: 0px;
@@ -356,7 +358,7 @@ header .btn-menu:hover {
 }
 
 .section-actualite.row {
-  padding: 20px 85px 20px 85px;
+  padding: 0px;
 }
 
 .section-actualite-title {
@@ -376,7 +378,6 @@ header .btn-menu:hover {
 
 .block-article-actualite .actualite-article {
   border-radius: 0px;
-  padding: 20px;
   border: 0px;
   transition: margin-top 0.5s;
 }
@@ -896,7 +897,7 @@ footer .widget_search {
     margin-bottom: 20px;
   }
 
-  .row.block-article.col-md-12.col-lg-12.col-sm-12, .block-article .article {
+  .row.block-article.col-md-12.col-lg-12.col-sm-12, .block-article .article, .block-article-actualite .actualite-article, header {
     padding-left: 0px;
     padding-right: 0px;
   }

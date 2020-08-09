@@ -271,7 +271,8 @@ header{
 	overflow: hidden;
 	border-radius: 0px;
 	background-color: $light-background-color;
-
+	padding-left: 0;
+	padding-right: 0;
 	.article{
 		border-radius: 0px;
     	background-color: $light-background-color;
@@ -361,7 +362,7 @@ header{
 	padding: 0px;
 }
 .section-actualite.row {
-  padding: 20px 85px 20px 85px;
+  padding: 0px;
 }
 .section-actualite-title {
 	padding: 15px;
@@ -378,7 +379,6 @@ header{
 }
 .block-article-actualite .actualite-article {
 	border-radius: 0px;
-  padding: 20px;
 	border: 0px;
 	transition: margin-top 0.5s;
 	
@@ -861,27 +861,27 @@ footer .widget_search{
 
 @media screen and (max-width: 540px)
 {
-  /* Header personalisation */
-  header{
-    padding-right: 0px;
-    padding-left: 0px;
-  }
-  .header-menu.col-lg-8.col-md-8.col-sm-6.col-6{
-    padding-top: 12px;
+	/* Header personalisation */
+	header{
+		padding-right: 0px;
+		padding-left: 0px;
 	}
-  /*slide personalisation */
-  .slide{
-    height: 165px;
-		.slide-article { 
-			bottom: 10px;
-			h2{
-				font-size: 1.8em;
-				margin-bottom: 20px;
+	.header-menu.col-lg-8.col-md-8.col-sm-6.col-6{
+		padding-top: 12px;
+	}
+	/*slide personalisation */
+	.slide{
+		height: 165px;
+			.slide-article { 
+				bottom: 10px;
+				h2{
+					font-size: 1.8em;
+					margin-bottom: 20px;
+				}
 			}
-		}
-  }
+	}
 
-  	.row.block-article.col-md-12.col-lg-12.col-sm-12, .block-article .article{
+  	.row.block-article.col-md-12.col-lg-12.col-sm-12, .block-article .article, .block-article-actualite .actualite-article, header{
 		padding-left: 0px;
 		padding-right: 0px;	
 	}

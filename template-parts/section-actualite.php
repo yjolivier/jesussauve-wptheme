@@ -4,20 +4,22 @@
 ?>
 
 <section class="section-actualite row">
-  <?php
-    if ( have_posts() ) :
-      // custom params for my loop
-      $args = array(
-          'cat' => $actualite_section_category, // category slug
-          'posts_per_page' => 3, // how many articles to display
-      );
-      $actualites_posts = new WP_Query($args);
-      $cardNum = 1;
-  ?>
-    <div class="section-actualite-title col-lg-12 col-12">
-      <h2><?php echo $actualite_section_title; ?></h2>
-    </div>
-    <div class="row block-article-actualite">
+  <div class="container">
+    <div class="row">
+      <?php
+        if ( have_posts() ) :
+          // custom params for my loop
+          $args = array(
+              'cat' => $actualite_section_category, // category slug
+              'posts_per_page' => 3, // how many articles to display
+          );
+          $actualites_posts = new WP_Query($args);
+          $cardNum = 1;
+      ?>
+        <div class="section-actualite-title col-lg-12 col-12">
+          <h2><?php echo $actualite_section_title; ?></h2>
+        </div>
+        <div class="row block-article-actualite">
       <?php 
         while ( $actualites_posts->have_posts() ) : $actualites_posts->the_post(); ?>
             <div class="card actualite-article col-lg-4 col-md-6">
@@ -39,4 +41,6 @@
         <?php $cardNum++; endwhile; wp_reset_postdata();
       ?>
       <?php endif;?> 
+    </div>
+  </div>
 </section>
