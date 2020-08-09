@@ -69,7 +69,14 @@ p {
 .corps{
 	background-color: #ccc;
 }
-
+.row{
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+.container-fluid{
+	padding-right: 0;
+	padding-left: 0;
+}
 /*
 ============================================================================================
  3. Header style 
@@ -264,11 +271,10 @@ header{
 	overflow: hidden;
 	border-radius: 0px;
 	background-color: $light-background-color;
-	padding: 20px 85px 20px 85px;
 
 	.article{
 		border-radius: 0px;
-    background-color: $light-background-color;
+    	background-color: $light-background-color;
 		border: 0px;
 		margin-bottom: 20px;
 
@@ -774,10 +780,6 @@ footer .widget_search{
 			width: 50%;
 			bottom: 15%;
 		}
-
-	.slide-article p{
-	/*display: none;*/
-	}
 	.carousel-control-prev, .carousel-control-next{
 		width: 4%;
 		margin-top: 25%;
@@ -803,10 +805,10 @@ footer .widget_search{
 		margin-top: 15%;
 	}
 
-	/*section evenement personalisation */
+	/*section evenement personalisation 
 	.block-article, .section-actualite.row, footer.footer-container,  .page-article-container{
 		padding: 20px 20px 20px 40px;
-	}
+	}*/
 	footer .col-sm{
 		text-align: left;
 	}
@@ -844,10 +846,10 @@ footer .widget_search{
 		margin-left: 0;
 	}
 
-	/*section evenement personalisation */
+	/*section evenement personalisation 
 	.block-article, .section-actualite.row{
 		padding: 15px 0px 15px 10px;
-	}
+	}*/
 	.Section-actualite .bulle-numero{
 		margin-left: 45%;
 	}
@@ -869,7 +871,7 @@ footer .widget_search{
 	}
   /*slide personalisation */
   .slide{
-    height: 150px;
+    height: 165px;
 		.slide-article { 
 			bottom: 10px;
 			h2{
@@ -878,6 +880,15 @@ footer .widget_search{
 			}
 		}
   }
+
+  	.row.block-article.col-md-12.col-lg-12.col-sm-12, .block-article .article{
+		padding-left: 0px;
+		padding-right: 0px;	
+	}
+	.section-evenement-title {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
 	.slide-article p{
 	display: none;
 	}

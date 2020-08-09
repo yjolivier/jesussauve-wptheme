@@ -62,6 +62,16 @@ p {
   background-color: #ccc;
 }
 
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 /*
 ============================================================================================
  3. Header style 
@@ -256,7 +266,6 @@ header .btn-menu:hover {
   overflow: hidden;
   border-radius: 0px;
   background-color: #f0efef;
-  padding: 20px 85px 20px 85px;
 }
 .block-article .article {
   border-radius: 0px;
@@ -790,10 +799,6 @@ footer .widget_search {
     bottom: 15%;
   }
 
-  .slide-article p {
-    /*display: none;*/
-  }
-
   .carousel-control-prev, .carousel-control-next {
     width: 4%;
     margin-top: 25%;
@@ -817,11 +822,10 @@ footer .widget_search {
     margin-top: 15%;
   }
 
-  /*section evenement personalisation */
-  .block-article, .section-actualite.row, footer.footer-container, .page-article-container {
-    padding: 20px 20px 20px 40px;
-  }
-
+  /*section evenement personalisation 
+  .block-article, .section-actualite.row, footer.footer-container,  .page-article-container{
+  	padding: 20px 20px 20px 40px;
+  }*/
   footer .col-sm {
     text-align: left;
   }
@@ -858,11 +862,10 @@ footer .widget_search {
     margin-left: 0;
   }
 
-  /*section evenement personalisation */
-  .block-article, .section-actualite.row {
-    padding: 15px 0px 15px 10px;
-  }
-
+  /*section evenement personalisation 
+  .block-article, .section-actualite.row{
+  	padding: 15px 0px 15px 10px;
+  }*/
   .Section-actualite .bulle-numero {
     margin-left: 45%;
   }
@@ -883,7 +886,7 @@ footer .widget_search {
 
   /*slide personalisation */
   .slide {
-    height: 150px;
+    height: 165px;
   }
   .slide .slide-article {
     bottom: 10px;
@@ -891,6 +894,16 @@ footer .widget_search {
   .slide .slide-article h2 {
     font-size: 1.8em;
     margin-bottom: 20px;
+  }
+
+  .row.block-article.col-md-12.col-lg-12.col-sm-12, .block-article .article {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .section-evenement-title {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .slide-article p {
