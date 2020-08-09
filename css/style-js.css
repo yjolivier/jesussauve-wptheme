@@ -414,7 +414,6 @@ header .btn-menu:hover {
 footer.footer-container {
   background-color: #1F1F1F;
   color: #d9d7d7;
-  padding: 10px 85px 20px 85px;
   font-family: "Montserrat", sans-serif;
   /*
   * 7.1 footer logo
@@ -823,10 +822,10 @@ footer .widget_search {
     margin-top: 15%;
   }
 
-  /*section evenement personalisation 
-  .block-article, .section-actualite.row, footer.footer-container,  .page-article-container{
-  	padding: 20px 20px 20px 40px;
-  }*/
+  .search-bar.col-lg-7.col-md-7.col-sm-12 {
+    padding-left: 0;
+  }
+
   footer .col-sm {
     text-align: left;
   }
@@ -875,12 +874,6 @@ footer .widget_search {
 	10.4 screen resolution <= 540 
 */
 @media screen and (max-width: 540px) {
-  /* Header personalisation */
-  header {
-    padding-right: 0px;
-    padding-left: 0px;
-  }
-
   .header-menu.col-lg-8.col-md-8.col-sm-6.col-6 {
     padding-top: 12px;
   }
@@ -897,12 +890,7 @@ footer .widget_search {
     margin-bottom: 20px;
   }
 
-  .row.block-article.col-md-12.col-lg-12.col-sm-12, .block-article .article, .block-article-actualite .actualite-article, header {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
-  .section-evenement-title {
+  .row.block-article.col-md-12.col-lg-12.col-sm-12, .block-article .article, .block-article-actualite .actualite-article, header, .section-evenement-title, .footer-header.col-lg-12.col-sm-12.col-md-12, .descriptition.col-lg-7.col-md-8.col-sm-12, .reseau-social.col-lg-2.col-md-4.col-sm-6 {
     padding-left: 0px;
     padding-right: 0px;
   }
