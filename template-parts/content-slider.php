@@ -17,7 +17,7 @@
     
     <?php
       if ( has_post_thumbnail_or_image ()) { 
-          the_post_thumbnail("slider-cover"); 
+        the_post_thumbnail("slider-cover"); 
       }
     ?>
   

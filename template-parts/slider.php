@@ -24,8 +24,8 @@
           if ( have_posts() ) :
               // custom params for my loop
               $args = array(
-                      'cat' => $slider_category_id, // category slug
-                      'posts_per_page' => 3, // how many articles to display
+                'cat' => $slider_category_id, // category slug
+                'posts_per_page' => 3, // how many articles to display
               );
               
               $slider_posts = new WP_Query($args);

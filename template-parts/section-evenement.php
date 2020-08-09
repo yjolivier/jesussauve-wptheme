@@ -20,7 +20,7 @@
   <div class="row block-article col-md-12 col-lg-12 col-sm-12">
     <?php 
       while ( $evenements_posts->have_posts() ) : $evenements_posts->the_post(); 
-          get_template_part('template-parts/content','article');
+        get_template_part('template-parts/content','article');
       endwhile; wp_reset_postdata();
     ?>
   </div>
