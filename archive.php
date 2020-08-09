@@ -23,7 +23,7 @@ get_header(); ?>
 									$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 									?>
 						            <?php while (have_posts()) : the_post(); ?>
-							        	<div class="archive-block col-lg-6">
+							        	<div class="archive-block col-lg-6 col-md-6">
 								        	<div class="archive-article-box">  
 									            <div class="card-img">
 									            	<?php
